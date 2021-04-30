@@ -12,19 +12,19 @@ public class Student {
 	@Id
 	int id;
 	//@Transient
-	String name;
+	StudentName name;
 	//@Column(name = "trimester")
 	int sem;
-	int average;
+	int avg;
 	
 	public  Student() {}
 
-	public Student(int id, String name, int semester, int average) {
+	public Student(int id, int semester, int average,StudentName sname) {
 		super();
 		this.id = id;
-		this.name = name;
 		this.sem = semester;
-		this.average = average;
+		this.avg = average;
+		this.name = sname;
 	}
 	public int getId() {
 		return id;
@@ -32,12 +32,7 @@ public class Student {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
 	public int getSemester() {
 		return sem;
 	}
@@ -45,16 +40,16 @@ public class Student {
 		this.sem = semester;
 	}
 	public int getAverage() {
-		return average;
+		return avg;
 	}
 	public void setAverage(int average) {
-		this.average = average;
+		this.avg = average;
 	}
 	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "\n"+id+"\t"+name+"\t"+sem+"\t"+average;
+		return "\n"+id+"\t"+name+"\t"+sem+"\t"+avg;
 	}
 	
 
