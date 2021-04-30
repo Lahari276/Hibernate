@@ -3,17 +3,19 @@ package com.niit.JavaHibernate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Transient;
 
-@Entity(name = "student_table")
+@Entity
+//@Table(name = "student_table")
 public class Student {
 	@Id
 	int id;
 	//@Transient
 	String name;
-	@Column(name = "trisemester")
+	//@Column(name = "trimester")
 	int sem;
-	int avg;
+	int average;
 	
 	public  Student() {}
 
@@ -22,7 +24,7 @@ public class Student {
 		this.id = id;
 		this.name = name;
 		this.sem = semester;
-		this.avg = average;
+		this.average = average;
 	}
 	public int getId() {
 		return id;
@@ -43,12 +45,17 @@ public class Student {
 		this.sem = semester;
 	}
 	public int getAverage() {
-		return avg;
+		return average;
 	}
 	public void setAverage(int average) {
-		this.avg = average;
+		this.average = average;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\n"+id+"\t"+name+"\t"+sem+"\t"+average;
+	}
 	
 
 }
