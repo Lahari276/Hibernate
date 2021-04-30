@@ -15,8 +15,8 @@ public class App
     	System.out.println( "Hello World!" );
         //Student student = new Student(12, "sana",54,80);
         //Student student1 = new Student(3, "hyma",8,60);
-    	StudentName sname = new StudentName("naru","lahari","reddy");
-    	Student student = new Student(10,6,70,sname);
+    	StudentName sname = new StudentName("nara","hari","reddy");
+    	Student student = new Student(3,6,70,sname);
     	
         Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class);
         
