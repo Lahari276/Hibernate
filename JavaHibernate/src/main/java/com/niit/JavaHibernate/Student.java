@@ -1,16 +1,22 @@
 package com.niit.JavaHibernate;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
-@Entity
+@Entity(name = "student_table")
 public class Student {
 	@Id
 	int id;
+	//@Transient
 	String name;
+	@Column(name = "trisemester")
 	int sem;
 	int avg;
 	
-	
+	public  Student() {}
+
 	public Student(int id, String name, int semester, int average) {
 		super();
 		this.id = id;
